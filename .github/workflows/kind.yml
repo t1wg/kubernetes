@@ -13,3 +13,4 @@ jobs:
         uses: helm/kind-action@v1
       - name: shell commands
         run: kubectl cluster-info --context kind-chart-testing
+      - run: kubectl get nodes -A --context kind-chart-testing
