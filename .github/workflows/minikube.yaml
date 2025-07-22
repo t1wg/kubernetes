@@ -24,5 +24,4 @@ jobs:
           cni: bridge
           addons: registry,ingress
     - name: shell commands
-      run: kubectl cluster-info --context kind-chart-testing
-    - run: kubectl get nodes -A --context kind-chart-testing
+      run: kubectl get nodes -A
