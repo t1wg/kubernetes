@@ -29,6 +29,5 @@ RUN chown -R docker /src/
 RUN ./bin/installdependencies.sh
 USER docker
 # Configure runner
-RUN ["./config.sh","--url", "https://github.com/t1wg/kubernetes" , "--token" , "APQGUDA7RZOBYHJRWBBMOCDIQTDS6","--unattended"]
-USER root
+RUN ["./config.sh","--url", "https://github.com/t1wg/kubernetes" , "--token" , "APQGUDGTL7OHMOTQYIRZBN3IQTEVW","--unattended"]
 ENTRYPOINT ["./run.sh"]
