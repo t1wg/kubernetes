@@ -12,7 +12,7 @@ jobs:
         
         with:
           redirect-to: FAILED_PODS
-          args: kubectl get pods -n default -o=jsonpath-as-json="{.items[?(@.status.phase=='Failed')].metadata.name}"
+          args: get pods -n default -o=jsonpath-as-json="{.items[?(@.status.phase=='Failed')].metadata.name}"
           
       - name: Slack Notification
         if: ${{ env.FAILED_PODS }} != '[]'
