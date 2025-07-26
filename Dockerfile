@@ -23,7 +23,7 @@ RUN curl -o actions-runner-linux-x64.tar.gz -L \
     https://github.com/actions/runner/releases/download/v2.326.0/actions-runner-linux-x64-2.326.0.tar.gz \
     && tar xzf actions-runner-linux-x64.tar.gz \
     && rm actions-runner-linux-x64.tar.gz
-RUN useradd -msg /bin/bash docker
+RUN useradd -ms /bin/bash -g docker docker
 RUN chown -R docker /src/
 RUN ./bin/installdependencies.sh
 USER docker
