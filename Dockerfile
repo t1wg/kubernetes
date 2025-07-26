@@ -24,6 +24,7 @@ RUN curl -o actions-runner-linux-x64.tar.gz -L \
     && tar xzf actions-runner-linux-x64.tar.gz \
     && rm actions-runner-linux-x64.tar.gz
 RUN useradd -ms /bin/bash -g docker docker
+RUN chown -R docker /etc/init.d/docker
 RUN chown -R docker /src/
 RUN ./bin/installdependencies.sh
 USER docker
