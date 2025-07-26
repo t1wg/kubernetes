@@ -22,4 +22,4 @@ USER docker
 # Configure runner
 RUN ["./config.sh","--url", "https://github.com/t1wg/kubernetes" , "--token" , "APQGUDBDHBYDLKW56CUW3DDIQSUZC","--unattended"]
 
-ENTRYPOINT ["/bin/sh", "./run.sh"]
+ENTRYPOINT ["./run.sh"]
