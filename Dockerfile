@@ -7,8 +7,7 @@ RUN apt update -y && apt install -y \
     curl \
     tar \
     git \
-    jq \
-    && rm -rf /var/lib/apt/lists/*
+    jq
 RUN apt update \
     apt install ca-certificates curl \
     install -m 0755 -d /etc/apt/keyrings \
