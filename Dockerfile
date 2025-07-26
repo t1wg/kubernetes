@@ -8,8 +8,8 @@ RUN apt update -y && apt install -y \
     tar \
     git \
     jq
-RUN apt install -y ca-certificates curl \
-    install -m 0755 -d /etc/apt/keyrings
+RUN apt install -y ca-certificates curl
+RUN install -m 0755 -d /etc/apt/keyrings
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
 RUN chmod a+r /etc/apt/keyrings/docker.asc
 RUN echo \
