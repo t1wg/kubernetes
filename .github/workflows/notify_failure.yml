@@ -11,10 +11,10 @@ jobs:
         
         with:
           redirect-to: FAILED_PODS
-          args: get pods -n default -o=jsonpath-as-json="{.items[?(@.status.phase=='Failed')].metadata.name}"
+          args: get pods -n default -o=jsonpath="{.items[?(@.status.phase=='Failed')].metadata.name}"
           
       - name: Slack Notification
-        if: ${{ env.FAILED_PODS }} != []
+        if: ${{ env.FAILED_PODS }} != ''
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: test-notifications-1
